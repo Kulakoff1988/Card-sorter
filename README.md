@@ -1,3 +1,3 @@
-# Card-sorter
+# Tripcard-sorter
 
 Making test from CallKipper company
