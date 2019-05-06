@@ -1,5 +1,6 @@
-import { tripCardSorter } from './tripCardSorter';
-import { TripCardSorter } from './tripCardSorterAsClass';
+// import { TripCardSorter } from './tripCardSorterAsClass';
+
+const TripCardSorter = require('./tripCardSorter');
 
 const   trip1 = {
     departure: `Moscow`,
@@ -82,16 +83,11 @@ const testResult3 = `1. From Praga, take flight GB789 to London. Gate 2, seat 23
 const commonTestList = [tripList1, tripList2, tripList3];
 const commonTestResult = [testResult1, testResult2, testResult3]
 
-const tripCardSorterTester = (list, expectingResult) => {
-    return tripCardSorter(list) === expectingResult ? `Test success` : `Test failed`;
-}
-
 const tripSorter = new TripCardSorter;
-const tripCardSorterClassTester = (list, expectingResult) => {
-    console.log(tripSorter.transformListToString(list) === expectingResult ? `Test success` : `Test failed`);
+const tripCardSorterTester = (list, expectingResult, index) => {
+    console.log(tripSorter.transformListToString(list) === expectingResult ? `Test class ${index} success` : `Test class ${index} failed`);
 }
 
 for (let i = 0; i < commonTestList.length; i ++) {
-    tripCardSorterTester(commonTestList[i], commonTestResult[i]);
-    tripCardSorterClassTester(commonTestList[i], commonTestResult[i]);
+    tripCardSorterTester(commonTestList[i], commonTestResult[i], i + 1);
 }
