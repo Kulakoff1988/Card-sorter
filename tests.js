@@ -1,5 +1,3 @@
-// import { TripCardSorter } from './tripCardSorterAsClass';
-
 const TripCardSorter = require('./tripCardSorter');
 
 const   trip1 = {

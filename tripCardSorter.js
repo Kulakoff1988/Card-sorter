@@ -49,5 +49,4 @@ class TripCardSorter {
     }
 };
 
-// export { TripCardSorter };
 module.exports = TripCardSorter;
